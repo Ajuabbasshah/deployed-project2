@@ -1,114 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> My First project </title>
-    <style>
-         h1{
-            color: aqua;
-            background-color: crimson;
-            text-align: center;
-           
-           
-
-         }
-         ul {
-           list-style-type: none;
-            margin: 0;
-           padding: 0;
-           overflow: hidden;
-         }
-         
-          li {
-         float: right;
-         background-color: pink;
-         }
-
-         li a {
-        
-         padding: 8px;
-         
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my first web side</title>
+  <style>
+    * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-       
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: white;
+  background-color: black;
+}
 
+.container {
+  max-width: 90rem;
+  margin: 2rem auto;
+  padding: 0px 2rem;
+}
 
-    </style>
+.img-fluid {
+  max-width: 100%;
+}
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 41px;
+  outline: 4px solid red;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  align-items: center;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.items a:link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.items a:hover {
+  color: red;
+}
+
+.active {
+  color: red !important;
+}
+
+button {
+  font-size: 2rem;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to right, #c31432, #892211);
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background: white;
+  outline: 1px solid red;
+  color: red;
+  border: none;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.short-info {
+  color: red;
+  font-size: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.hero-heading {
+  font-size: 3rem;
+  margin-bottom: 0.3rem;
+}
+.hero-sub-heading {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.users {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0px;
+}
+.user {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid red;
+}
+.learn-more {
+  align-self: start;
+  margin-top: 3rem;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 800px) {
+  .items {
+    display: none;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .learn-more {
+    align-self: start;
+    margin: 1rem 0px;
+  }
+}
+
+  </style>
 </head>
 <body>
-    <h1>my first mini  project</h1>
-    
-    <!--header section start-->
-    <section id="header">
-        <div class="header contanier">
-            <div class="nav-bar">
-                <div class="brand">
-                    <a href="hero">
-                        <div class="nav-list">
-                            <div class="hamburger">
-                                <div class="bar">
-                                  <ul>
-                                    <li><a href="#hero" data-afters="home">Home</a></li>
-                                    <li><a href="#services" data-afters="home">Service</a></li>
-                                    <li><a href="#project" data-afters="home">Project</a></li>
-                                    <li><a href="#about" data-afters="home">About</a></li>
-                                    <li><a href="#contant" data-afters="home">Contant</a></li>
 
-                                 </ul>
-                                 </div>
-                                 
-                            </div>
-                        </div>
-                      
-                    </a>
-                   
+<header>
+  <nav>
+    <div class="logo">
+      <img src="./images2/img (1).jpg" width="200" height="200">
+    </div>
+    <div class="items">
+      <a href="#" class="active">Home</a>
+      <a href="#">Service</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Blog</a>
+    </div>
 
-                </div>
+    <div class="other">      <button>Log in</button>
+    </div>
+  </nav>
+</header>
 
-            </div>
-            </div>
-        </section>
- 
-        <!--header section end-->
-
-         <!--service section start -->
-         <section id="services">
-            <div class="services container"> 
-                <div class="services-top">
-                    <h1>Service</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odit aperiam nostrum rem et mollitia dicta id eaque earum sint repudiandae nulla excepturi pariatur aut asperiores delectus non, voluptate dolore</p>
-                    </div>
-                    <div class="services-bottom">
-                        <!--service item 1-->
-                        <div class="services-item"><img width="96" height="96" src="./images/img1 (1).jpg">
-                            <h1>web design </h1>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis accusantium ducimus vitae tempore labore, est, quasi nihil tempora sint sed nulla voluptatibus ratione nesciunt delectus neque numquam earum dolor quibusdam. </p>
-                             <!--service item 2-->
-                    <div class="services-item"><img width="96" height="96" src="./images/img1 (2).jpg">
-                        <h1>web design </h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis accusantium ducimus vitae tempore labore, est, quasi nihil tempora sint sed nulla voluptatibus ratione nesciunt delectus neque numquam earum dolor quibusdam. </p>
-
-                          <!--service item 3-->
-                        <div class="services-item"><img width="96" height="96" src="./images/img1 (3).jpg">
-                        <h1>web design </h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis accusantium ducimus vitae tempore labore, est, quasi nihil tempora sint sed nulla voluptatibus ratione nesciunt delectus neque numquam earum dolor quibusdam. </p>
-
-                       
-                    </div>
-                       <!--service item 4-->
-                    <div class="services-item"><img width="96" height="96" src="./images/img4.jpg">
-                        <h1>web design </h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis accusantium ducimus vitae tempore labore, est, quasi nihil tempora sint sed nulla voluptatibus ratione nesciunt delectus neque numquam earum dolor quibusdam. </p>
-                      
-                        </div> </div>
-                    </div>
-                </div>
-               
+<!-- Hero Section -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="info">
+        <p class="short-info">abbas shah</p>
+        <h2 class="hero-heading">web developer</h2>
+        <p class="hero-sub-heading"> web developer and mobile application</p>
+        <div class="users">
+          <img src="./images2/img (2).jpg" width="200" height="200">
+          <img src="./images2/img (3).jpg"  width="200" height="200">
+          <img src="./images2/img (4).jpg"  width="200" height="200">
+          <img src="./images2/img (5).jpg"  width="200" height="200">
+          <br><br>
+          
+          <p>4M+ users</p>
         </div>
-   </section>
-    
-                            <!--service section start -->
-                        </div>
-</body>
-</html>
+        <button class="learn-more">
+          Learn More</button>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1519326882834-04c334752f58?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTg0MDUxMzU&ixlib=rb-1.2.1&q=80" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Hero Section Ends -->
